@@ -1,0 +1,26 @@
+galaxy_info:
+  role_name: cobaltstrike-docker
+  author: Ralph May
+  description: Installs Cobalt Strike Teamserver in Docker
+  company: Warhorse
+
+  issue_tracker_url: https://github.com/warhorse/ansible-role-cobaltstrike-docker/issues
+
+  license: BSD-3-Clause
+
+  min_ansible_version: 2.1
+
+  platforms:
+    - name: Debian
+      versions:
+        - buster
+
+  galaxy_tags:
+    - security
+    - cobaltstrike
+    - c2
+    - hacking
+
+dependencies:
+  - geerlingguy.docker
+  - geerlingguy.pip

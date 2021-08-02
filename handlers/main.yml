@@ -1,0 +1,21 @@
+---
+- name: restart cobaltstrike
+  docker_container:
+    name: "{{ cs_container_name }}"
+    image: warhorse/cobaltstrike:latest
+    pull: yes
+    state: started
+    restart: yes
+    hostname: "{{ cs_hostname }}"
+    restart_policy: always
+    published_ports: "{{ cs_ports }}"
+    volumes:
+     - "{{ cs_dir }}:/opt/cobaltstrike"
+    env:
+      COBALTSTRIKE_KEY: '{{ cs_key }}'
+      COBALTSTRIKE_PASS: '{{ cs_password }}'
+      COBALTSTRIKE_EXP: '{{ cs_exp_date }}'
+      COBALTSTRIKE_PROFILE: '{{ cs_profile }}'
+    networks:
+      - name: '{{ cs_dockernet }}'
+    purge_networks: true

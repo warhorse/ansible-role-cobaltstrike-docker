@@ -1,0 +1,36 @@
+---
+- name: Ensures cobaltstrike dir exists
+  file:
+    path: '{{ item }}'
+    state: directory
+  with_items:
+  - '{{ cs_dir }}'
+  - '{{ cs_dir }}/profiles'
+
+- name: Adding profile file
+  template:
+    src: "{{ cs_profile }}"
+    dest: "{{ cs_dir }}/profiles/{{ cs_profile }}.profile"
+    mode: 0600
+  notify:
+    - restart cobaltstrike
+
+- name: Cobaltstrike
+  docker_container:
+    name: "{{ cs_container_name }}"
+    image: warhorse/cobaltstrike:latest
+    pull: yes
+    state: started
+    hostname: "{{ cs_hostname }}"
+    restart_policy: always
+    published_ports: "{{ cs_ports }}"
+    volumes:
+     - "{{ cs_dir }}:/opt/cobaltstrike"
+    env:
+      COBALTSTRIKE_KEY: '{{ cs_key }}'
+      COBALTSTRIKE_PASS: '{{ cs_password }}'
+      COBALTSTRIKE_EXP: '{{ cs_exp_date }}'
+      COBALTSTRIKE_PROFILE: '{{ cs_profile }}'
+    networks:
+      - name: '{{ cs_dockernet }}'
+    purge_networks: true

@@ -1,0 +1,8 @@
+- name: 'setup : create cobaltstrike network'
+  become: true
+  docker_network:
+    name: '{{ cs_docker_network }}'
+    ipam_config:
+      - subnet: '{{ cs_network_ipam_subnet }}'
+        gateway: '{{ cs_network_ipam_gateway }}'
+        iprange: '{{ cs_network_ipam_iprange }}'

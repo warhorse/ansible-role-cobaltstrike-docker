@@ -1,0 +1,26 @@
+---
+cs_hostname: "cobaltstrike"
+cs_container_name: "cobaltstrike"
+cs_key: ''
+cs_password: ''
+cs_exp_date: ''
+cs_profile: 'clean.profile.j2'
+
+cs_docker_network: "cobaltstrike"
+cs_network_ipam_temp: "{{ cs_network_ipam | default({}) }}"
+cs_network_ipam_subnet: "{{
+  cs_network_ipam_temp.subnet
+  | default('172.16.1.0/24')
+}}"
+cs_network_ipam_gateway: "{{
+  cs_network_ipam_temp.gateway
+  | default('172.16.1.1')
+}}"
+cs_network_ipam_iprange: "{{
+  cs_network_ipam_temp.iprange
+  | default('172.16.1.0/24')
+}}"
+
+cs_dir: '/opt/docker/cobaltstrike'
+cs_ports:
+  - "50050:50050"
