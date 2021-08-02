@@ -1,5 +1,5 @@
 galaxy_info:
-  role_name: cobaltstrike-docker
+  role_name: cobaltstrike_docker
   author: Ralph May
   description: Installs Cobalt Strike Teamserver in Docker
   company: Warhorse

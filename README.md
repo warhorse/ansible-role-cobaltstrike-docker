@@ -1,7 +1,7 @@
 Ansible Cobalt Strike (Docker)
 =========
 
-[![t94j0.mythic](https://img.shields.io/ansible/role/55834)](https://galaxy.ansible.com/warhorse/cobaltstrike-docker)
+[![warhorse.cobaltstrike_docker](https://img.shields.io/ansible/role/55834)](https://galaxy.ansible.com/warhorse/cobaltstrike_docker)
 
 
 Install Cobalt Strike (Docker)
@@ -12,13 +12,21 @@ Role Variables
 A list of all the variables can be found in ./defaults/main.yml.
 
 `cs_dir` - Cobalt Strike container directory 
-`cs_ports` - Cobalt Strike container ports to open
+
+`cs_ports` - Cobalt Strike container ports
+
 `cs_hostname` - Cobalt Strike container hostname
+
 `cs_container_name` - Cobalt Strike container name 
-`cs_key` - Cobalt Strike teamserver License Key (REQUIRED)
+
+`cs_key` - Cobalt Strike teamserver license key (REQUIRED)
+
 `cs_password` - Cobalt Strike teamserver password (REQUIRED)
-`cs_exp_date` - Cobalt Strike becon expiration date (REQUIRED)
-`cs_profile` - Location of your Cobalt Strike 
+
+`cs_exp_date` - Cobalt Strike becaon expiration date (REQUIRED)
+
+`cs_profile` - Location of your Cobalt Strike profile
+
 `cs_docker_network` Cobalt Strike container docker network
 
 
@@ -63,4 +71,4 @@ BSD
 Author Information
 ------------------
 
-Ralph May <>
+Ralph May
