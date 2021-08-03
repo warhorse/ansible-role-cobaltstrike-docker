@@ -1,7 +1,7 @@
 Ansible Cobalt Strike (Docker)
 =========
 
-[![warhorse.cobaltstrike_docker](https://img.shields.io/ansible/role/55834)](https://galaxy.ansible.com/warhorse/cobaltstrike_docker)
+[![warhorse.cobaltstrike_docker](https://img.shields.io/ansible/role/55892)](https://galaxy.ansible.com/warhorse/cobaltstrike_docker)
 
 
 Install Cobalt Strike (Docker)
@@ -42,7 +42,7 @@ Example Playbook
 ```yaml
 - hosts: servers
   roles:
-      - { role: warhorse.cobaltstrike-docker }
+      - { role: warhorse.cobaltstrike_docker }
 ```
 
 Example Vars
