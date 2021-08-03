@@ -3,14 +3,6 @@
   apt:
     update_cache: yes
 
-- name: Install Docker
-  include_role:
-    name: geerlingguy.docker
-
-- name: Install Pip
-  include_role:
-    name: geerlingguy.pip
-
 - name: Install pydocker
   pip:
     name: docker
