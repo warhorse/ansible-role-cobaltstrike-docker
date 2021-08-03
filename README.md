@@ -25,7 +25,7 @@ A list of all the variables can be found in ./defaults/main.yml.
 
 `cs_exp_date` - Cobalt Strike becaon expiration date (REQUIRED)
 
-`cs_profile` - Location of your Cobalt Strike profile
+`cs_profile_location` - Location of your Cobalt Strike profile file
 
 `cs_docker_network` Cobalt Strike container docker network
 
