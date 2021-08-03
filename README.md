@@ -62,7 +62,7 @@ cs_container_name: "cobaltstrike"
 cs_key: '000-000-000-000-000'
 cs_password: 'Password'
 cs_exp_date: '2020-12-20'
-cs_profile: 'clean.profile.j2'
+cs_profile_location: 'clean.profile.j2'
 cs_docker_network: "cobaltstrike"
 cs_dir: '/opt/docker/cobaltstrike'
 cs_ports:
