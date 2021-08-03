@@ -32,5 +32,5 @@
       COBALTSTRIKE_EXP: '{{ cs_exp_date }}'
       COBALTSTRIKE_PROFILE: '{{ cs_profile }}'
     networks:
-      - name: '{{ cs_dockernet }}'
+      - name: '{{ cs_docker_network }}'
     purge_networks: true
