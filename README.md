@@ -33,8 +33,16 @@ A list of all the variables can be found in ./defaults/main.yml.
 Dependencies
 ------------
 
-ansible-galaxy install geerlingguy.docker
-ansible-galaxy install geerlingguy.pip
+```shell
+ansible-galaxy install geerlingguy.docker geerlingguy.pip
+```
+
+Install
+------------
+
+```shell
+ansible-galaxy install warhorse.cobaltstrike_docker
+```
 
 Example Playbook
 ----------------
