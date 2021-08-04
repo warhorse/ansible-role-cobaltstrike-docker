@@ -10,7 +10,7 @@
 - name: Adding profile file
   template:
     src: "{{ cs_profile_location }}"
-    dest: "{{ cs_dir }}/profiles/{{ cs_profile }}"
+    dest: "{{ cs_dir }}/profiles/{{ cs_profile }}.profile"
     mode: 0600
   notify:
     - restart cobaltstrike
