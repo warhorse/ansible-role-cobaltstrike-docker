@@ -20,9 +20,9 @@
     name: "{{ cs_container_name }}"
     image: "{{ cs_docker_image }}"
     pull: yes
-    state: unless-stopped
+    state: started
     hostname: "{{ cs_hostname }}"
-    restart_policy: always
+    restart_policy: unless-stopped
     published_ports: "{{ cs_ports }}"
     labels: '{{ cs_docker_labels }}'
     volumes:

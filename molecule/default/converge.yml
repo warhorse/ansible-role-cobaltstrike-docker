@@ -2,6 +2,6 @@
 - name: Converge
   hosts: all
   tasks:
-    - name: "Include ansible-role-mythic"
+    - name: "Include ansible-role-cobaltstrike-docker"
       include_role:
-        name: "ansible-role-mythic"
+        name: "ansible-role-cobaltstrike-docker"
