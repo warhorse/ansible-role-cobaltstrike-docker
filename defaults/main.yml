@@ -7,6 +7,8 @@ cs_exp_date: ''
 cs_profile: 'malleable.profile'
 cs_profile_location: 'clean.profile.j2'
 
+cs_docker_labels: {}
+cs_docker_image: "warhorse/cobaltstrike:latest"
 cs_docker_network: "cobaltstrike"
 cs_network_ipam_temp: "{{ cs_network_ipam | default({}) }}"
 cs_network_ipam_subnet: "{{

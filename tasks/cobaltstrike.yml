@@ -18,12 +18,13 @@
 - name: Cobaltstrike
   docker_container:
     name: "{{ cs_container_name }}"
-    image: warhorse/cobaltstrike:latest
+    image: "{{ cs_docker_image }}"
     pull: yes
-    state: started
+    state: unless-stopped
     hostname: "{{ cs_hostname }}"
     restart_policy: always
     published_ports: "{{ cs_ports }}"
+    labels: '{{ cs_docker_labels }}'
     volumes:
      - "{{ cs_dir }}:/opt/cobaltstrike"
     env:
