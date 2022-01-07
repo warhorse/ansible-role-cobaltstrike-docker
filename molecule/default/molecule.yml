@@ -1,6 +1,10 @@
 ---
 dependency:
   name: galaxy
+lint: |
+  set -e
+  yamllint .
+  ansible-lint
 driver:
   name: docker
 platforms:
@@ -13,8 +17,6 @@ platforms:
     pre_build_image: true
 provisioner:
   name: ansible
-  lint:
-    name: ansible-lint
 # playbooks:
 #   converge: ${MOLECULE_PLAYBOOK:-playbook.yml}
 scenario:
