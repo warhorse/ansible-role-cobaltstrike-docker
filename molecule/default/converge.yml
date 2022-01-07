@@ -1,8 +1,6 @@
 ---
----
 - name: Converge
   hosts: all
-  become: true
 
   pre_tasks:
     - name: Update apt cache.
@@ -23,3 +21,4 @@
 
   roles:
     - role: warhorse.cobaltstrike_docker
+

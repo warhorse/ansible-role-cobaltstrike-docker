@@ -5,7 +5,7 @@ driver:
   name: docker
 platforms:
   - name: instance
-    image: "geerlingguy/docker-ubuntu2004-ansible:latest"
+    image: geerlingguy/docker-ubuntu2004-ansible:latest
     command: ${MOLECULE_DOCKER_COMMAND:-""}
     volumes:
       - /sys/fs/cgroup:/sys/fs/cgroup:ro
@@ -13,5 +13,11 @@ platforms:
     pre_build_image: true
 provisioner:
   name: ansible
-  playbooks:
-    converge: ${MOLECULE_PLAYBOOK:-converge.yml}
+  lint:
+    name: ansible-lint
+# playbooks:
+#   converge: ${MOLECULE_PLAYBOOK:-playbook.yml}
+scenario:
+  name: default
+verifier:
+  name: testinfra
