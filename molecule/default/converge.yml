@@ -6,7 +6,7 @@
       apt: update_cache=yes cache_valid_time=600
       when: ansible_os_family == 'Debian'
 
-    - name: Wait for systemd to complete initialization.  # noqa 303
+    - name: Wait for systemd to complete initialization.
       command: systemctl is-system-running
       register: systemctl_status
       until: >
@@ -17,6 +17,6 @@
       when: ansible_service_mgr == 'systemd'
       changed_when: false
       failed_when: systemctl_status.rc > 1
-      
+
   roles:
     - role: warhorse.cobaltstrike_docker

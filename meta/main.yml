@@ -13,7 +13,10 @@ galaxy_info:
   platforms:
     - name: Debian
       versions:
-        - buster
+        - all
+    - name: Ubuntu
+      versions:
+        - all
 
   galaxy_tags:
     - security

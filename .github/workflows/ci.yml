@@ -42,6 +42,7 @@ jobs:
       matrix:
         distro:
           - ubuntu2004
+          - debian10
 
     steps:
       - name: Check out the codebase.
