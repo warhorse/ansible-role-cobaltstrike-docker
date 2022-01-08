@@ -3,12 +3,19 @@ Ansible Cobalt Strike (Docker)
 
 [![CI](https://github.com/warhorse/ansible-role-cobaltstrike-docker/workflows/CI/badge.svg?event=push)](https://github.com/warhorse/ansible-role-cobaltstrike-docker/actions?query=workflow%3ACI)
 [![warhorse.cobaltstrike_docker](https://img.shields.io/ansible/role/55892)](https://galaxy.ansible.com/warhorse/cobaltstrike_docker)
+[![warhorse.cobaltstrike_docker](https://img.shields.io/ansible/quality/55892)](https://galaxy.ansible.com/warhorse/cobaltstrike_docker)
+
 
 ![Cobaltstrike Logo](./images/cs_logo.png "Cobaltstrike Logo")
 
 Install Cobalt Strike in (Docker)
 
 This role is part of the Warhorse Automation Framework. This role can be used with Warhorse or as a standalone role.
+
+Docker Image
+-------------
+
+[ghcr.io/warhorse/docker-cobaltstrike](https://github.com/warhorse/docker-cobaltstrike)
 
 Role Variables
 --------------
