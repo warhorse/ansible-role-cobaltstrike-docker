@@ -85,7 +85,7 @@ cs_ports:
 License
 -------
 
-BSD
+MIT/BSD
 
 Author Information
 ------------------
