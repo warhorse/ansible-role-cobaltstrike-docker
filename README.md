@@ -4,7 +4,9 @@ Ansible Cobalt Strike (Docker)
 [![CI](https://github.com/warhorse/ansible-role-cobaltstrike-docker/workflows/CI/badge.svg?event=push)](https://github.com/warhorse/ansible-role-cobaltstrike-docker/actions?query=workflow%3ACI)
 [![warhorse.cobaltstrike_docker](https://img.shields.io/ansible/role/55892)](https://galaxy.ansible.com/warhorse/cobaltstrike_docker)
 [![warhorse.cobaltstrike_docker](https://img.shields.io/ansible/quality/55892)](https://galaxy.ansible.com/warhorse/cobaltstrike_docker)
-
+[![warhorse.cobaltstrike_docker](https://img.shields.io/ansible/role/d/55892)](https://galaxy.ansible.com/warhorse/cobaltstrike_docker)
+![License](https://img.shields.io/github/license/warhorse/ansible-role-cobaltstrike-docker)
+![Commit](https://img.shields.io/github/last-commit/warhorse/ansible-role-cobaltstrike-docker)
 
 ![Cobaltstrike Logo](./images/cs_logo.png "Cobaltstrike Logo")
 
